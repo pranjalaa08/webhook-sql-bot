@@ -1,0 +1,24 @@
+app:
+  name: "John Doe"
+  regNo: "REG12347"        # <- change to your actual regNo
+  email: "john@example.com"
+  autoDownloadQuestionPdf: false  # true to try downloading the Drive PDF locally
+
+spring:
+  datasource:
+    url: jdbc:h2:file:./data/solutions-db
+    driverClassName: org.h2.Driver
+    username: sa
+    password:
+  jpa:
+    hibernate:
+      ddl-auto: update
+    open-in-view: false
+  h2:
+    console:
+      enabled: true
+
+logging:
+  level:
+    root: INFO
+    com.example.webhooksqlbot: DEBUG
